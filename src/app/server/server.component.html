@@ -1,0 +1,10 @@
+<!-- ngStyle is an example of an Attribute Directive, attribute directives DONT add/remove elements,
+     they only change the element they are placed on.
+     The square brackets are not part of the directive name. They indicate we want to bind to some property of
+     the directive. 
+     ngClass will add a css class to an element if a certain condition is true. -->
+<p 
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online', offline: serverStatus === 'offline'}">
+  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
